@@ -1,4 +1,15 @@
-define(['jquery', 'bootstrap'], function   ($) {
+define(['module', 'bootstrap'],
+  function (module) {
+
+
+
+  // Highlight the top nav as scrolling occurs
+      $('body').scrollspy({
+          target: '.navbar-fixed-top',
+          offset: 51
+      });
+
+    console.log(module);
 
     "use strict"; // Start of use strict
 
@@ -27,7 +38,7 @@ define(['jquery', 'bootstrap'], function   ($) {
         offset: {
             top: 100
         }
-    })
+    });
 
     // Floating label headings for the contact form
     $(function() {

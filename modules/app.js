@@ -2,9 +2,6 @@ requirejs.config({
 	//By default load any module IDs from js/lib
 	baseUrl: 'modules',
 
-	shim : {
-		"bootstrap" : { "deps" :['jquery'] }
-	},
 	//except, if the module ID starts with "app",
 	//load it from the js/app directory. paths
 	//config is relative to the baseUrl, and
@@ -13,14 +10,29 @@ requirejs.config({
 	paths: {
 		jquery: '../jquery.min',
 		bootstrap: '../bootstrap.min'
+	},
+
+	shim: {
+		"bootstrap": {
+			"deps": ['jquery']
+		}
+	},
+
+	config: {
+		"freelancer": {
+			text: "Lilya",
+			kkk: "Lilya"
+		}
 	}
+
 });
 
 // Start the main app logic.
-requirejs(['jquery', 'bootstrap', 'freelancer'], function   ($) {
+requirejs(
+	['jquery', 'freelancer',
+		'bootstrap',
+	'portfolioList'],
+	function ($) {
 
-	// $(document).on('click', function () {
-	// 	alert('click');
-	// });
 
 });
